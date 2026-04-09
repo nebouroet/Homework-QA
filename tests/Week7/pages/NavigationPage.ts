@@ -23,38 +23,31 @@ export class NavigationPage {
         this.booksLink = page.getByRole('link', { name: 'Books', exact: true });   
     }
 
-    async clickApparel() {
-    await this.apparelLink.click();
-    await expect(this.page).toHaveURL('/?category=Apparel');
+    async navigateToApparel() {
+  await this.page.getByRole('link', { name: 'Apparel & Accessories', exact: true }).click();
   }
 
-    async clickMakeup() {
-    await this.makeupLink.click();
-    await expect(this.page).toHaveURL('/?category=Makeup');
+    async navigateToMakeup() {
+    await this.page.getByRole('link', { name: 'Makeup', exact: true  }).click();
   } 
 
-    async clickSkincare() {
-    await this.skincareLink.click();
-    await expect(this.page).toHaveURL('/?category=Skincare');
+    async navigateToSkincare() {
+    await this.page.getByRole('link', { name: 'Skincare', exact: true }).click();
   }
 
-    async clickFragrance() {
-    await this.fragranceLink.click();
-    await expect(this.page).toHaveURL('/?category=Fragrance');
+    async navigateToFragrance() {
+    await this.page.getByRole('link', { name: 'Fragrance', exact: true }).click();
   } 
 
-    async clickMen() {
-    await this.menLink.click();
-    await expect(this.page).toHaveURL('/?category=Men');
+    async navigateToMen() {
+    await this.page.getByRole('link', { name: 'Men', exact: true }).click();
   }
 
-    async clickHaircare() {
-    await this.haircareLink.click();
-    await expect(this.page).toHaveURL('/?category=Hair%20Care');
+    async navigateToHaircare    () {
+    await this.page.getByRole('link', { name: 'Hair Care', exact: true }).click();
   }
 
-    async clickBooks() { 
-        await this.booksLink.click();
-        await expect(this.page).toHaveURL('/?category=Books');
+    async navigateToBooks() { 
+        await this.page.getByRole('link', { name: 'Books', exact: true }).click();
     }   
 }

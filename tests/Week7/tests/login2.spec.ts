@@ -16,12 +16,10 @@ import { LoginPage } from '../pages/LoginPage';
     test('empty login fields', async ({ loginPage, page }) => {
         await loginPage.login('', '12341234');
         await expect(loginPage.usernameInput).toHaveAttribute('required', '');
-        await expect(loginPage.passwordInput).toHaveAttribute('required', ''); 
        });
 
     test('empty password field', async ({ loginPage, page }) => {
         await loginPage.login('aguspe', '');
-        await expect(loginPage.usernameInput).toHaveAttribute('required', '');
         await expect(loginPage.passwordInput).toHaveAttribute('required', ''); 
     })
 

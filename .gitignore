@@ -6,7 +6,6 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 Test Kira/
-e2e
 test.js
 test.py
 README.md
